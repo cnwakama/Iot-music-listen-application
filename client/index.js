@@ -38,18 +38,69 @@ const handleAction = async () => {
     audio.play();
     await sleep(3000);
     actionButton.disabled = false;
+
+    const request = require('request');
+
+    request.post(
+        'https://sudo-server-music.glitch.me/new_note',
+        { json: { todo:  'hello world'} },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body);
+            }
+        }
+    );
 }
 
 // audio and timestamp send
+//Date.now() + 'audio' + Date.now()
+// var request = require('request');
+//
+// request.post(
+//     'https://sudo-server-music.glitch.me/new_note',
+//     { json: { todo:  'hello world'} },
+//     function (error, response, body) {
+//         if (!error && response.statusCode == 200) {
+//             console.log(body);
+//         }
+//     }
+// );
 
-var request = require('request');
+// const express = require("express");
+// const bodyParser = require("body-parser");
+// const app = express();
+// const fs = require("fs");
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+//
+// fetch("/new_note", {
+//     method: "POST",
+//     body: "helloooo",
+//     //headers: { "Content-Type": "application/json" },
+//     url: "https://sudo-server-music.glitch.me/new_note"
+// })
+//     .then(res => res.json())
+//     .then(response => {
+//         console.log(JSON.stringify(response));
+//     });
+// // get dream value and add it to the list
+// dreams.push(dreamInput.value);
+// appendNewDream(dreamInput.value);
+//
+// // reset form
+// dreamInput.value = "";
+// dreamInput.focus();
+//};
 
-request.post(
-    'http://www.yoursite.com/formpage',
-    { json: { key:  Date.now() + 'audio' + Date.now() } },
-    function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(body);
-        }
-    }
-);
+// const axios = require('axios')
+//
+// axios.post('https://sudo-server-music.glitch.me/new_note', {
+//     todo: 'Buy the milk'
+// })
+//     .then((res) => {
+//         console.log(`statusCode: ${res.statusCode}`)
+//         console.log(res)
+//     })
+//     .catch((error) => {
+//         console.error(error)
+//     })
