@@ -177,6 +177,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="92dp"
+        android:visibility="invisible"
         android:text="TextView" />
 
     <TextView
