@@ -1,9 +1,10 @@
 package com.uiowa.iot.music;
 
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,8 +15,6 @@ import com.github.nkzawa.socketio.client.Socket;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.net.URISyntaxException;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private Socket mSocket;
-
+    private int count = 0;
     private String note;
     private String encoded;
 
@@ -63,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
 //                            Utilities.log("~~~~~~~~ Decoded: ", Arrays.toString(decoded));
 
-//                            TextView imgView = (TextView)findViewById(R.id.custom);
-//                            imgView.setVisibility(TextView.VISIBLE);
+                            plotNotes(note, count);
+
+                            if (count >= 7) count = 0;
+                            else count ++;
 
                             mSocket.emit("response", "I got you");
 
@@ -122,6 +123,105 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+
+    public void plotNotes(String note, int count){
+        TextView noteText = (TextView) findViewById((R.id.textNote));
+        noteText.setText(note);
+        noteText.setVisibility(View.VISIBLE);
+        ImageView image = (ImageView) findViewById(R.id.imageView);
+
+        System.out.println(count);
+
+        switch(count)
+        {
+            case 0:
+                image = (ImageView) findViewById(R.id.imageView5);
+                break;
+            case 1:
+                image = (ImageView) findViewById(R.id.imageView6);
+                break;
+            case 2:
+                image = (ImageView) findViewById(R.id.imageView7);
+                break;
+            case 3:
+                image = (ImageView) findViewById(R.id.imageView8);
+                break;
+            case 4:
+                image = (ImageView) findViewById(R.id.imageView);
+                break;
+            case 5:
+                image = (ImageView) findViewById(R.id.imageView1);
+                break;
+            case 6:
+                image = (ImageView) findViewById(R.id.imageView2);
+                break;
+            case 7:
+                image = (ImageView) findViewById(R.id.imageView3);
+                break;
+        }
+        if( count >= 4) count -= 4;
+
+        if(note.equals("E")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 165, 386, 27);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("F")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 148, 386, 41);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("G")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 133, 386, 41);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("A")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 111, 386, 41);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("B")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 93, 386, 41);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("C")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 75, 386, 41);
+            image.setLayoutParams(lp);
+        }
+
+        else if(note.equals("D")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 57, 386, 41);
+            image.setLayoutParams(lp);
+        }
+
+        else if(note.equals("EE")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 39, 386, 41);
+            image.setLayoutParams(lp);
+        }
+        else if(note.equals("FF")){
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(image.getLayoutParams());
+            if(count > 0 && count < 4) count = 165 * count;
+            lp.setMargins(165 + count, 19, 386, 41);
+            image.setLayoutParams(lp);
+        }
+
+        image.setVisibility(View.VISIBLE);
+
     }
 
 }

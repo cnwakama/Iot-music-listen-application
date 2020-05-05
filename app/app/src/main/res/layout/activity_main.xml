@@ -5,10 +5,10 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="top"
-    android:textAlignment="center"
     android:background="@android:color/white"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:textAlignment="center"
     android:weightSum="1">
 
     <!--    <FrameLayout-->
@@ -26,116 +26,6 @@
     <!--            android:src="@drawable/get4net171200480" />-->
 
     <!--    </FrameLayout>-->
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="232dp"
-        android:background="@drawable/treble_staff_large">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="386dp"
-            android:layout_marginBottom="72dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="148dp"
-            android:layout_marginBottom="45dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="26dp"
-            android:layout_marginBottom="124dp"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="270dp"
-            android:layout_marginBottom="96dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-    </RelativeLayout>
-    <ImageView
-        android:id="@+id/outside_imageview4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginRight="-105dp"
-        android:layout_marginBottom="-81dp"
-        android:scaleType="fitXY" />
-
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="232dp"
-        android:background="@drawable/treble_staff_large">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="386dp"
-            android:layout_marginBottom="72dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="148dp"
-            android:layout_marginBottom="45dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="26dp"
-            android:layout_marginBottom="124dp"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="270dp"
-            android:layout_marginBottom="96dp"
-            android:contentDescription="TODO"
-            android:src="@drawable/musical_notes_transparent_24" />
-
-    </RelativeLayout>
-
     <ImageView
         android:id="@+id/outside_imageview9"
         android:layout_width="wrap_content"
@@ -146,11 +36,168 @@
         android:layout_marginBottom="-81dp"
         android:scaleType="fitXY" />
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="232dp"
+        android:background="@drawable/treble_staff_large">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginEnd="386dp"
+            android:layout_marginRight="386dp"
+            android:layout_marginBottom="72dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="148dp"
+            android:layout_marginBottom="45dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="124dp"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="270dp"
+            android:layout_marginBottom="96dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="232dp"
+        android:background="@drawable/treble_staff_large">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="134dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="111dp"
+            android:layout_marginRight="377dp"
+            android:layout_marginBottom="41dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="363dp"
+            android:layout_marginTop="107dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:layout_marginBottom="45dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="485dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="124dp"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginRight="286dp"
+            android:layout_marginBottom="90dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/musical_notes_transparent_24"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
     <TextView
-        android:id="@+id/custom"
-        android:layout_width="234dp"
-        android:layout_height="182dp"
-        android:text="HELLO WORLD"
-        android:visibility="invisible" />
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textNote"
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:text="A"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="129sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:baselineAligned="false"
+        android:text="Note"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="48sp" />
 
 </LinearLayout>
