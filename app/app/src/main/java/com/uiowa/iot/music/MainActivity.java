@@ -49,22 +49,24 @@ public class MainActivity extends AppCompatActivity {
 //                        String username;
 //                        String message;
                         try {
-                            note = data.getString("username");
-                            encoded = data.getString("message");
+                            note = data.getString("note");
+                            encoded = data.getString("audio");
 
                             Log.i("Decode", "64 bit string");
-                            byte[] decoded = Base64.decode(encoded, 0);
+                            Log.i("Note", note);
+//                            byte[] decoded = Base64.decode(encoded, 0);
 
-                            File file2 = new File(Environment.getExternalStorageDirectory() + "/hello-5.wav");
-                            FileOutputStream os = new FileOutputStream(file2, true);
-                            os.write(decoded);
-                            os.close();
+//                            File file2 = new File(Environment.getExternalStorageDirectory() + "/hello-5.wav");
+//                            FileOutputStream os = new FileOutputStream(file2, true);
+//                            os.write(decoded);
+//                            os.close();
 
 //                            Utilities.log("~~~~~~~~ Decoded: ", Arrays.toString(decoded));
 
-                            Log.i("Note", note);
-                            TextView imgView = (TextView)findViewById(R.id.custom);
-                            imgView.setVisibility(TextView.VISIBLE);
+//                            TextView imgView = (TextView)findViewById(R.id.custom);
+//                            imgView.setVisibility(TextView.VISIBLE);
+
+                            mSocket.emit("response", "I got you");
 
                         } catch (Exception e) {
                             return;

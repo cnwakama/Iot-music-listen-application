@@ -6,6 +6,7 @@ var io = require('socket.io');
 
 var socket = io("https://glimmer-lying-stoplight.glitch.me", {path: '/nodejs/socket.io'});
 
+
 // const influx = new Influx.InfluxDB({
 //   host: 'localhost',
 //   database: 'ocean_tides',
@@ -16,6 +17,40 @@ var socket = io("https://glimmer-lying-stoplight.glitch.me", {path: '/nodejs/soc
 //       tags: ['unit', 'location']
 //     }
 //   ]
+
+const client = new InfluxDB({
+  database: 'musicDB',
+  username: 'databaase',
+  password: 'root',
+  hosts: [
+    { host: 'localhost' },
+  ],
+  port: 8086,
+  schema: [
+    {
+      measurement: 'tide',
+      fields: { height: Influx.FieldType.FLOAT },
+      tags: ['unit', 'location']
+    }
+  ]
+});
+
+influx.getDatabaseNames()
+  .then(names => {
+    if (!names.includes('ocean_tides')) {
+      return influx.createDatabase('ocean_tides');
+    }
+  })
+  .then(() => {
+    app.listen(app.get('port'), () => {
+      console.log(`Listening on ${app.get('port')}.`);
+    });
+    writeDataToInflux(hanalei);
+    writeDataToInflux(hilo);
+    writeDataToInflux(honolulu);
+    writeDataToInflux(kahului);
+  })
+  .catch(error => console.log({ error }));
 
 // influx.writePoints([
 //   {
