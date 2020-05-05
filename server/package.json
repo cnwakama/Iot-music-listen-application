@@ -9,9 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "influx": "^5.5.1",
-    "influxdb": "0.0.1",
-    "socket.io": "^2.3.0"
+    "socket.io-client": "^2.3.0"
   }
 }
