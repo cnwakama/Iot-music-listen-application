@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
@@ -20,7 +17,8 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.net.URISyntaxException;
-import java.util.Arrays;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         try {
             mSocket = IO.socket("https://glimmer-lying-stoplight.glitch.me");
             mSocket.connect();
@@ -65,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
 //                            Utilities.log("~~~~~~~~ Decoded: ", Arrays.toString(decoded));
 
                             Log.i("Note", note);
+                            TextView imgView = (TextView)findViewById(R.id.custom);
+                            imgView.setVisibility(TextView.VISIBLE);
+
                         } catch (Exception e) {
                             return;
                         }
