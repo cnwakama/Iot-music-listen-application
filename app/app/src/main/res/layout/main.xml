@@ -44,7 +44,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="262dp"
             android:layout_marginBottom="69dp"
-            android:src="@drawable/musical_notes_transparent_24" />
+            android:src="@drawable/musical_notes_transparent_24"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -54,7 +55,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="87dp"
             android:layout_marginBottom="44dp"
-            android:src="@drawable/musical_notes_transparent_24" />
+            android:src="@drawable/musical_notes_transparent_24"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -74,7 +76,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="182dp"
             android:layout_marginBottom="96dp"
-            android:src="@drawable/musical_notes_transparent_24" />
+            android:src="@drawable/musical_notes_transparent_24"
+            android:contentDescription="TODO" />
 
     </RelativeLayout>
 
