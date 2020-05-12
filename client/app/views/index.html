@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Record Audio</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+  </head>
+  <body style="background-color:rgba(255,255,0,0.5);">
+    <h1>Audio Recording</h1>
+    <p>Talk for 3 seconds, then you will hear your recording played back</p>
+    <script src="index.js"></script>
+    <button id="action" onclick="handleAction()">
+      Press to start recording...
+    </button>
+    <div id="label-container"></div>
+  </body>
+</html>
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!-- background-image: url('https://cdn.glitch.com/f826bdd8-e42e-47ec-aaad-ca6dfab92774%2FmusicNotes.jpg?v=1588619961883'); -->
